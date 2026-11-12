@@ -1,0 +1,13 @@
+
+CREATE TABLE incidents (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(150) NOT NULL,
+    location VARCHAR(200) NOT NULL,
+    severity VARCHAR(20) NOT NULL,
+    weather_condition VARCHAR(50),
+    road_condition VARCHAR(50),
+    incident_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(20) NOT NULL DEFAULT 'REPORTED',
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
