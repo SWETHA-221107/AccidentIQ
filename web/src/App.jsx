@@ -37,6 +37,7 @@ import "./App.css";
 import CreateIncident from "./CreateIncident";
 import MapView from "./MapView";
 import RoadSafetyNews from "./RoadSafetyNews";
+import ResponseCentre from "./ResponseCentre";
 
 const API_URL = "http://localhost:8080/api/incidents";
 
@@ -857,20 +858,7 @@ function App() {
                   </section>
                 </>
               ) : (
-                <section className="panel">
-                  <div className="panel-heading">
-                    <div>
-                      <h3>Response queue</h3>
-                      <p>
-                        Update incident statuses here. Actual emergency
-                        dispatch is not connected.
-                      </p>
-                    </div>
-                    <span className="demo-badge">DISPATCH DEMO</span>
-                  </div>
-
-                  <IncidentTable {...tableProps} />
-                </section>
+                <ResponseCentre incidents={incidents} />
               )}
             </>
           )}
